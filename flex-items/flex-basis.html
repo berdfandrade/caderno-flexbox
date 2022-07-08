@@ -16,8 +16,17 @@
     <title>Fundamentos flex basis</title>
 
     <style>
+
+        h1 {
+        font-family:"Oswald Bold", bold, sans-serif;
+        font-size: 30px; }
+
+        h2 {
+        font-family:"Oswald Bold", bold, sans-serif;
+        font-size: 20px; }
+
         .flex-container{
-            max-width: 300px;
+            max-width: 500px;
             border: 2px dashed black;
             display: flex;
         }
@@ -33,6 +42,11 @@
             flex-basis: auto;
         }
 
+        .fg-0{
+            flex-grow: 0;
+        }
+
+
         .fg-1{
             flex-grow: 1;
         }
@@ -41,15 +55,47 @@
             flex-grow: 2;
         }
 
+        .b-0{
+            flex-basis: 0;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
 
     </style>
 </head>
 <body>
-    <div class="flex-container">
+    <h1>Basis auto</h1>
+<h2>   
+        <div class="flex-container">
         <div class="items bauto fg-1">A</div>
         <div class="items bauto fg-1">BBB</div>
         <div class="items bauto fg-1">C</div>
-        <div class="items bauto fg-1">DEF</div>
+        <div class="items bauto fg-2">DEF</div>
     </div>
+</h2>
+
+    <h1>0 (zero)</h1>
+<h2>   
+    <div class="flex-container">
+    <div class="items b-0 fg-1">A</div>
+    <div class="items b-0 fg-1">BBB</div>
+    <div class="items b-0 fg-1">C</div>
+    <div class="items b-0 fg-1">DEF</div>
+</div>
+</h2>
+
+<h1>Basis + Width</h1>
+<h2>   
+    <div class="flex-container">
+    <div class="items w100 fg-2">A</div>
+    <div class="items w100 fg-2">BBB</div>
+    <div class="items w100 fg-2">C</div>
+    <div class="items w100 fg-2">DEF</div>
+</div>
+</h2>
+
 </body>
 </html>
