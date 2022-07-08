@@ -1,0 +1,96 @@
+    
+
+<!--Fundamentos do Flex-shrink. 
+    Escrito com ajuda do HTML snippets. 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Flex</title>
+
+    <style>
+
+        h1 {
+        font-family:"Oswald Bold", bold, sans-serif;
+        font-size: 30px; }
+
+        h2 {
+        font-family:"Oswald Bold", bold, sans-serif;
+        font-size: 20px; }
+
+        .flex-container{
+            max-width: 400px;
+            border: 2px dashed black;
+            display: flex;
+            margin-bottom: auto;
+        }
+
+        .item{
+            background-color: darkslategrey;
+            color: bisque;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex-1{
+            flex: 1;
+        /*Isso quer dizer que >> grow = 1, shrink = 1, basis = 0 */
+        }
+
+        .largura{
+            width: 200px;
+            /* min-width: 250px; */
+        }
+
+        .flex-2{
+            flex: 2; 
+        /* grow = 1, shrink = 1, basis = 0 */
+        }
+    
+
+    </style>
+
+</head>
+<body>
+    <h2>Flex: 1</h2>
+<h1>
+    <div class="flex-container">
+            <div class="item flex-1">A</div>
+            <div class="item flex-1">Bernardo</div>
+            <div class="item flex-1">CC</div>
+            <div class="item flex-1">D</div>
+            <div class="item flex-1">EF</div>
+     </div>
+ </h1>
+
+ <h2>Flex: mix</h2>
+ <h1>
+     <div class="flex-container">
+             <div class="item flex-1">A</div>
+             <div class="item flex-2">Bernardo </div>
+             <div class="item flex-1">CC</div>
+             <div class="item flex-1">D</div>
+             <div class="item flex-2">EF</div>
+      </div>
+  </h1>
+
+  <h2>Width ignorado ->  basis =  0</h2>
+  <h1>
+      <div class="flex-container">
+              <div class="item flex-1 largura">A</div>
+              <div class="item flex-1 largura">Bernardo Andrade</div>
+              <div class="item flex-1 largura">CC</div>
+              <div class="item flex-1 largura">D</div>
+              <div class="item flex-1 largura">EF</div>
+       </div>
+   </h1>
+
+</body>
+</html>
