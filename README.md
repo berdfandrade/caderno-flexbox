@@ -1,4 +1,4 @@
-# Flexbox
+# Caderno - Flexbox
 
 ![GitHub top language](https://img.shields.io/github/languages/top/berdfandrade1/flexbox)
 
@@ -35,5 +35,3 @@ Aqui está um exemplo simples de como usar o Flexbox em CSS:
   margin: 10px;
 }
 ```
-
-
